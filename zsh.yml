@@ -6,6 +6,11 @@
   - name: Install prerequisites
     apt:
         name: "{{ packages }}"
+    vars:
+        packages:
+            - git
+            - curl
+            - wget
   - name: Install zsh
     apt:
         name: zsh

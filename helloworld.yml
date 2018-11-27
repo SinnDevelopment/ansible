@@ -1,7 +1,7 @@
 ---
 - name: Hello World!
   hosts: all
- 
+  remote_user: james 
   tasks:
  
   - name: Hello World!

@@ -1,0 +1,14 @@
+---
+- name: Install zsh
+  hosts: all
+  remote_user: james 
+  tasks:
+  - name: Install prerequisites
+    apt:
+        name: "{{ packages }}"
+  - name: Install zsh
+    apt:
+        name: zsh
+        update_cache: yes
+  - name: Install Oh-My-zsh
+    shell: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
